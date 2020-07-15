@@ -12,3 +12,13 @@ $$PE_{(pos,2i)}=sin(pos/10000^{2i/d_{model}})$$
 $$PE_{(pos,2i+1)}=cos(pos/10000^{2i/d_{model}})$$
 
 $pos$ is the position and $i$ is the dimension. So what does this actually mean? We know both $sin$ and $cos$ oscillate between -1 and 1.
+
+Something that is very important in the Attention paper is actually the attention function. The purpose is to focus on the important words. But the important question is how this is done. One way to help visualize is:
+
+![Attention Score](./images/AIAYN-Fig.2.png)
+
+Resources:
+
+[Attention Is All You Need](https://arxiv.org/pdf/1706.03762.pdf)
+
+[A Simple Explanation of Transformers in NLP](https://towardsdatascience.com/simple-explanation-of-transformers-in-nlp-da1adfc5d64f) - Medium article

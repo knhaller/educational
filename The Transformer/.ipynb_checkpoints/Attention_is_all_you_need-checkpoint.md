@@ -2,6 +2,8 @@
 
 #### Notes by: Katie Haller
 
+## Make sure to keep asking the question: WHY???
+
 ![The Transformer](./images/AIAYN-Fig.1.png)
 *Taken from Attention Is All You Need*
 
@@ -11,7 +13,7 @@ In the embedding, words are represented by vectors. The idea is to create a mapp
 
 ### Positional Encoding
 
-The positional encoders help with relation to other words in the sentence. The equations used are:
+The positional encoders help with relation to other words in the sentence. white cat black dog. The equations used are:
 
 $$PE_{(pos,2i)}=sin(pos/10000^{2i/d_{model}})$$
 $$PE_{(pos,2i+1)}=cos(pos/10000^{2i/d_{model}})$$
@@ -39,7 +41,7 @@ Something that is very important in the Attention paper is actually the attentio
 ![Multi-head Attention](./images/AIAYN-Fig.4.png)
 *Taken from Attention Is All You Need*
 
-The main difference between Multi-head attention and scaled dot product is that in the multi-head attention, multiple processes happen simultaneously. 
+The main difference between Multi-head attention and scaled dot product is that in the multi-head attention, multiple processes happen simultaneously. The concept of this can be thought of similar to features. 
 
 Resources:
 

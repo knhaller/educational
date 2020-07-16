@@ -49,6 +49,13 @@ A visualization for this attention function can be seen below:
 
 The main difference between Multi-head attention and scaled dot product is that in the multi-head attention, multiple processes happen simultaneously. The concept of this can be thought of similar to features. The multi-head attention is the main contribution of this paper.
 
+#### Why Self Attention?
+
+![Self Attention](./images/AIAYN-Fig.6.png)
+*From Attention Is All You Need*
+
+
+
 ### Position-Wise Feed-Forward Networks
 
 $$FFN(x)=max(0, xW_{1}+b_{1})W_{2}+b_{2}$$

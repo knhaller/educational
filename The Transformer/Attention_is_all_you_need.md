@@ -64,6 +64,20 @@ $$FFN(x)=max(0, xW_{1}+b_{1})W_{2}+b_{2}$$
 
 ### Training Cost
 
+#### Optimizer
+
+They used the Adam optimizer with $\beta_{1} = 0.9$, $\beta_{2} = 0.98$
+
+$$lrate=d_{model}^{-0.5} • min(step\_num^{-0.5}, step\_num • warmup\_steps^{-1.5})$$
+
+$d_{model} = 512$, so $lrate= $
+
+#### Regularization
+
+![Scores](./images/AIAYN-Fig.7.png)
+
+The higher the Bleu score, the better the model is performing. However, with FLOPS, the better number is the lower number, because it means that it is less expensive computationally.
+
 Resources:
 
 [Attention Is All You Need](https://arxiv.org/pdf/1706.03762.pdf)

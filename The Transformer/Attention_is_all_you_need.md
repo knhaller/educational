@@ -13,12 +13,12 @@ In the embedding, words are represented by vectors. The idea is to create a mapp
 
 ### Positional Encoding
 
-The positional encoders help with relation to other words in the sentence. white cat black dog. The equations used are:
+The positional encoders help with relation to other words in the sentence. For example, "The animal didn't cross the street because it was too tired" as humans we know animal and it are the same. The positional encoding would be able to tell you that animal is in the 1st position and it is in the 9th, separated by 8 spaces. The equations used are:
 
 $$PE_{(pos,2i)}=sin(pos/10000^{2i/d_{model}})$$
 $$PE_{(pos,2i+1)}=cos(pos/10000^{2i/d_{model}})$$
 
-$pos$ is the position and $i$ is the dimension. So what does this actually mean? We know both $sin$ and $cos$ oscillate between -1 and 1.
+$pos$ is the position and $i$ is the dimension. The details on how this actually works is tricky. 
 
 ### Attention Functions
 
@@ -36,12 +36,22 @@ Something that is very important in the Attention paper is actually the attentio
 ![Attention Score](./images/AIAYN-Fig.2.png)
 *Taken from A Simple Explanation of Transformers in NLP*
 
+The dot product attention is much faster and more space efficient than additive attention.
+
+A visualization for this attention function can be seen below:
+
+![Scaled Dot Product](./images/AIAYN-Fig.5.png)
+
 #### Multi-head Attention
 
 ![Multi-head Attention](./images/AIAYN-Fig.4.png)
 *Taken from Attention Is All You Need*
 
-The main difference between Multi-head attention and scaled dot product is that in the multi-head attention, multiple processes happen simultaneously. The concept of this can be thought of similar to features. 
+The main difference between Multi-head attention and scaled dot product is that in the multi-head attention, multiple processes happen simultaneously. The concept of this can be thought of similar to features. The multi-head attention is the main contribution of this paper.
+
+### Position-Wise Feed-Forward Networks
+
+$$FFN(x)=max(0, xW_{1}+b_{1})W_{2}+b_{2}$$
 
 Resources:
 

@@ -54,11 +54,15 @@ The main difference between Multi-head attention and scaled dot product is that 
 ![Self Attention](./images/AIAYN-Fig.6.png)
 *From Attention Is All You Need*
 
+>"Motivating our use of self-attention we consider three desiderata. One is the total computational complexity per layer. Another is the amount of computation that can be parallelized, as measured by the minimum number of sequential operations required. The third is the path length between long-range dependencies in the network." - Attention Is All You Need
 
+The shorter the path, the easier it is to learn long range dependencies. When n < d, the faster self- attention is than both recurrent and convolutional. Self attention is faster and will be easier to learn long range dependencies. 
 
 ### Position-Wise Feed-Forward Networks
 
 $$FFN(x)=max(0, xW_{1}+b_{1})W_{2}+b_{2}$$
+
+### Training Cost
 
 Resources:
 

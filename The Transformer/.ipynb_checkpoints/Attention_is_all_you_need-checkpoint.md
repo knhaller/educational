@@ -2,7 +2,11 @@
 
 #### Notes by: Katie Haller
 
-## Make sure to keep asking the question: WHY???
+## The Transformer
+
+The Transformer offers reduced computation time. The Transformer is also the first transduction model relying entirely on self-attention.
+
+### The Architecture
 
 ![The Transformer](./images/AIAYN-Fig.1.png)
 *Taken from Attention Is All You Need*
@@ -19,6 +23,8 @@ $$PE_{(pos,2i)}=sin(pos/10000^{2i/d_{model}})$$
 $$PE_{(pos,2i+1)}=cos(pos/10000^{2i/d_{model}})$$
 
 $pos$ is the position and $i$ is the dimension. The details on how this actually works is tricky. However, $PE_{pos}$ and $PE_{pos+k}$ is linear. 
+
+Go to the Linearity paper for more details.
 
 ### Attention Functions
 
@@ -77,6 +83,9 @@ $d_{model} = 512$ and $warmup\_steps = 4000$, so when the step number reaches 40
 ![Scores](./images/AIAYN-Fig.7.png)
 
 The higher the Bleu score, the better the model is performing. However, with FLOPS, the better number is the lower number, because it means that it is less expensive computationally.
+
+### Some random notes about the paper
+- Layer normalization is used instead of batch normalization because the test and training sequences are of different length.
 
 Resources:
 

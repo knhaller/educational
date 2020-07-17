@@ -18,7 +18,7 @@ The positional encoders help with relation to other words in the sentence. For e
 $$PE_{(pos,2i)}=sin(pos/10000^{2i/d_{model}})$$
 $$PE_{(pos,2i+1)}=cos(pos/10000^{2i/d_{model}})$$
 
-$pos$ is the position and $i$ is the dimension. The details on how this actually works is tricky. 
+$pos$ is the position and $i$ is the dimension. The details on how this actually works is tricky. However, $PE_{pos}$ and $PE_{pos+k}$ is linear. 
 
 ### Attention Functions
 
@@ -70,7 +70,7 @@ They used the Adam optimizer with $\beta_{1} = 0.9$, $\beta_{2} = 0.98$
 
 $$lrate=d_{model}^{-0.5} • min(step\_num^{-0.5}, step\_num • warmup\_steps^{-1.5})$$
 
-$d_{model} = 512$, so $lrate= $
+$d_{model} = 512$ and $warmup\_steps = 4000$, so when the step number reaches 4000, $lrate= 0.000699$.
 
 #### Regularization
 
@@ -85,3 +85,5 @@ Resources:
 [A Simple Explanation of Transformers in NLP](https://towardsdatascience.com/simple-explanation-of-transformers-in-nlp-da1adfc5d64f) - Medium article
 
 [Attention - Attention](https://lilianweng.github.io/lil-log/2018/06/24/attention-attention.html) - Github article
+
+[Linearity of Sinusoidal Positional Encodings](https://cs.brown.edu/courses/cs146/assets/files/linearity.pdf) - Brown University

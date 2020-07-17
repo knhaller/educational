@@ -24,7 +24,7 @@ $$PE_{(pos,2i+1)}=cos(pos/10000^{2i/d_{model}})$$
 
 $pos$ is the position and $i$ is the dimension. The details on how this actually works is tricky. However, $PE_{pos}$ and $PE_{pos+k}$ is linear. 
 
-Go to the Linearity paper for more details.
+Go to the [Linearity paper](https://cs.brown.edu/courses/cs146/assets/files/linearity.pdf) for more details. 
 
 ### Attention Functions
 

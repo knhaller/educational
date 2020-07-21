@@ -3,9 +3,9 @@
 #### Notes by: Katie Haller
 
 ![BERT architecture](./images/BERT-Fig.1.png)
-<sup>[1](#myfootnote1)</sup> 
+<sup>[1](#myfootnote1)</sup>
 
-
+During the pre-training, the model is trained on unlabeled data. Later, the parameters are fine-tuned with labeled data from the downstream tasks.
 
 
 Resources:

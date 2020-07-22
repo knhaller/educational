@@ -20,7 +20,7 @@ A portion of those words are unchaged:
 ![BERT input representation](./images/BERT-Fig.2.png)
 <sup>[1](#myfootnote1)</sup>
 
-The segment embedding identifies if it's sentence A or B. The token embeddings can be viewed as word embeddings. The position embedding is added for the position in the sequence.
+The segment embedding identifies if it's sentence A or B. The token embeddings can be viewed as word embeddings, except instead it is applied after WordPiece. The position embedding is added for the position in the sequence.
 
 Resources:
 

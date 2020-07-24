@@ -22,11 +22,19 @@ A portion of those words are unchaged:
 
 The segment embedding identifies if it's sentence A or B. The token embeddings can be viewed as word embeddings, except instead it is applied after WordPiece. The position embedding is added for the position in the sequence.
 
+![BERT architecture](./images/BERT-Fig.5.png)
+<sup>[4](#myfootnote4)</sup>
+
+The BERT base is made up of 12 Transformer encoders.
+
+In fine-tuning, the learning rate and batch size are less than pre-training.
+
 Resources:
 
 <a name="myfootnote1">1</a>: [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](https://arxiv.org/pdf/1810.04805.pdf)
 
-
 <a name ="myfootnote2">2</a>: [BERT Explained](https://www.youtube.com/watch?v=xI0HHN5XKDo)
 
 <a name="myfootnote3">3</a>: [BERT Explained – A list of Frequently Asked Questions](https://yashuseth.blog/2019/06/12/bert-explained-faqs-understand-bert-working/#:~:text=The%20input%20representation%20used%20by,classification%20token%20%E2%80%93%20%5BCLS%5D.)
+
+<a name="myfootnote4">4</a>: [The Illustrated BERT](http://jalammar.github.io/illustrated-bert/)

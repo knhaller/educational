@@ -48,13 +48,17 @@ $$p_{n}=\frac{\sum_{ngrams \in \hat{y}} Count_{clip} (ngram)}{\sum_{ngram \in \h
 \begin{equation}
   BP=\begin{cases}
     1, & \text{if $[MT]>[ref]$}.\\
-    exp(1-\frac{[MT]}{[ref]}), & \text{otherwise}.
+    exp(1-\frac{[ref]}{[MT]}), & \text{otherwise}.
   \end{cases}
 \end{equation}
 
 where $[ref]$ is the reference output length and $[MT]$ is the MT output length.
 
-$$Bleu=(BP)(exp[\frac{1}{N}\sum_{n=1}^{N}p_{n}])$$
+$$Bleu=(BP)(exp[\frac{1}{N}\sum_{n=1}^{N}log(p_{n})])$$
+
+Edit: There was an error in Andrew Ng's video. brevity pentalty is supposed to be $1 - \frac{[ref]}{[MT]}$.
+
+Edit 2: In the Bleu score, $p_{n}$ is supposed to be $log(p_{n})$
 
 ## Reference:
 
